@@ -1,0 +1,46 @@
+<html>
+<title>Paul's Alarm Clock</title>    
+<head>
+<link rel="stylesheet" type="text/css" href="clockwork.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+
+<body>
+<div id="clocking"></div>    
+    
+<script>
+//    $(document).ready(function(){
+//    $('#wrapper').fadeIn();
+//});
+    
+    setInterval(clockWork, 500)
+    function clockWork() {
+        var time = new Date();
+        var hours = time.getHours();
+        var min = time.getMinutes();
+        var sec = time.getSeconds();
+    
+//        
+    //Enable for standard 12 hour time (add toggle button if time)
+    //   if (hours > 12) {
+//            hours = hours - 12;
+//        }
+//    
+//        if (hours == 0) {
+//            hours = 12
+//        }
+        
+        document.getElementById('clocking').innerHTML = hours + ':' + min + ':' +sec;
+    
+    }
+    </script>
+    
+    
+</body>
+    
+    
+    
+</head>
+    
+    
+</html>
