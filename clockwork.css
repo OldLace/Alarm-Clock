@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin:700);
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
 
 body {
     background-color: #4B5320;
@@ -7,7 +7,7 @@ body {
 #clocking {
     position: fixed;
     color: whitesmoke;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Black Ops One', cursive;
     font-size: 120px;
     top: 50%;
     left: 50%

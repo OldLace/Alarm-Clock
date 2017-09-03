@@ -9,9 +9,12 @@
 <div id="clocking"></div>    
     
 <script>
+// Experimented with jQuery to have a fade-in, even when I linked the library correct, it didn't // work    
 //    $(document).ready(function(){
 //    $('#wrapper').fadeIn();
 //});
+// Had moment js linked in older versions for what i was hoping would be easier manipulation of 
+    // date\time, but in the end it didn't help me
     
     setInterval(clockWork, 500)
     function clockWork() {
@@ -19,18 +22,20 @@
         var hours = time.getHours();
         var min = time.getMinutes();
         var sec = time.getSeconds();
+        var meridian = "AM";
     
-//        
-    //Enable for standard 12 hour time (add toggle button if time)
-    //   if (hours > 12) {
-//            hours = hours - 12;
-//        }
-//    
-//        if (hours == 0) {
-//            hours = 12
-//        }
         
-        document.getElementById('clocking').innerHTML = hours + ':' + min + ':' +sec;
+//             
+        if (hours == 0) {
+            hours = 12;
+        }
+
+      if (hours > 12) {
+          hours = hours - 12;
+          meridian = "PM";
+        }
+//    
+      document.getElementById('clocking').innerHTML = hours + ':' + min + ':' + sec + " " + meridian;
     
     }
     </script>
