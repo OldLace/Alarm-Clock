@@ -34,6 +34,9 @@
           hours = hours - 12;
           meridian = "PM";
         }
+
+    min = (min < 10) ? "0" + min : min;
+    sec = (sec < 10) ? "0" + sec : sec;
 //    
       document.getElementById('clocking').innerHTML = hours + ':' + min + ':' + sec + " " + meridian;
     
